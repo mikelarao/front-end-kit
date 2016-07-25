@@ -4,7 +4,7 @@ var gulp = require('gulp'),
 	plumber = require('gulp-plumber'),
 	browserSync = require('browser-sync'),
 	rename = require("gulp-rename"),
-	sourcemaps = require('gulp-sourcemaps');
+	//sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('scripts', function() {
 	gulp.src('js/*.js')
@@ -17,9 +17,10 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('styles', function() {
-	return sass('sass/*.sass', { sourcemap: true, style: 'expanded' })
+	//return sass('sass/*.sass', { sourcemap: true, style: 'expanded' })
+	return sass('sass/*.sass', { style: 'expanded' })
     .on('error', sass.logError)
-    .pipe(sourcemaps.write())
+    //.pipe(sourcemaps.write())
     .pipe(gulp.dest('_app/assets/css/'))
     .pipe(browserSync.reload({
       stream: true
