@@ -1,10 +1,12 @@
 .nav
-  display: flex
-  justify-content: space-around
-  padding: 10px 0
-  margin-bottom: 20px
+  @media screen and (min-width: 768px)
+    display: flex
+    width: 100%
+    justify-content: space-around
+    padding: 10px 0
+    margin-bottom: 20px
 
-  background-color: rgb(213, 213, 213)
+    background-color: rgb(213, 213, 213)
 
   &--item
     &.is-selected
