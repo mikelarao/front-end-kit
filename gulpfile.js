@@ -3,7 +3,7 @@ var gulp = require('gulp'),
 	sass = require('gulp-ruby-sass'),
 	plumber = require('gulp-plumber'),
 	browserSync = require('browser-sync'),
-	rename = require("gulp-rename"),
+	rename = require("gulp-rename");
 	//sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('scripts', function() {
