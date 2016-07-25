@@ -10,7 +10,7 @@ $(document).ready(function(){
 
   $(window).on("resize", function () {
 
-    if ( $(window).width() >= 768 ){
+    if ( $(window).width() >= 992 ){
 
       $(".navbar-nav li:has(ul) .dropdown-menu").each( function() {
 
@@ -36,7 +36,7 @@ $(document).ready(function(){
 
   $(window).on("resize", function () {
 
-    if ( $(window).width() <= 1200 ){
+    if ( $(window).width() <= 992 ){
 
 
       $( ".navbar-nav .fa-caret-down" ).on( "click", function() {

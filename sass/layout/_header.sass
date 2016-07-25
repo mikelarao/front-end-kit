@@ -1,16 +1,51 @@
-.navbar-default
+header
+  position: relative
+  max-height: 600px
 
-  background-color: transparent
 
-.navbar-header
-  display: inline-block
-  width: 100%
+  .carousel
+    max-height: 600px
+    overflow: hidden
 
-  background-color: transparent
+    .carousel-inner
 
-  text-align: center
+      .item
 
-  .navbar-brand
-    display: inline-block
-    margin: 0 auto
-    float: none
+        &--banner
+          width: 100%
+
+        .carousel-caption
+          top: 10%
+          right: 10%
+
+    .carousel-indicators
+      top: 10%
+      bottom: auto
+
+
+
+  .navbar-default
+    @media screen and (min-width:992px)
+      position: absolute
+      bottom: 0
+      width: 100%
+
+      z-index: 9
+    margin-bottom: 0px
+    padding: 0px
+    border: 0px solid $p-color
+
+    background-color: transparent
+
+    .navbar-header
+      display: inline-block
+      width: 100%
+
+      background-color: transparent
+
+      text-align: center
+
+      .navbar-brand
+        display: inline-block
+        margin: 0 auto
+        float: none
