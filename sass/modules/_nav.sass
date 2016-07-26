@@ -1,36 +1,104 @@
-ul.nav
-  @media screen and (min-width: 992px)
-    display: flex
-    width: 100%
-    justify-content: space-around
+.navbar-default
 
-    background-color: transparent
+  ul.navbar-nav
+    margin-bottom: 10px
 
+    font-family: $p-font-bold
 
-  li
-    position: relative
     @media screen and (min-width: 992px)
-    &:hover
-      .dropdown-menu
-        display: inline-block
-
-    a
-      text-align: center
-
-    &.has-sub
-
-      .menu-caret
-        float: right
-
-    .dropdown-menu
-      position: relative
+      display: flex
       width: 100%
-      border-radius: 0px
-      @media screen and (min-width: 992px)
-        position: absolute
-        width: auto
+      margin-bottom: 0px
+      justify-content: space-around
 
-@media (max-width: 992px)
+      background-color: $trans
+
+    > li
+      position: relative
+      @media screen and (min-width: 992px)
+        &:hover
+          .dropdown-menu
+            display: inline-block
+
+      > a
+        @media screen and (min-width: 992px)
+          padding: 1.438em 0px
+          border-bottom: 4px solid $trans
+
+        font-size: 0.875em
+        @media screen and (min-width: 992px)
+          text-align: center
+
+        color: $t-color
+
+        &:hover,
+        &:active,
+        &:focus
+          background-color: $s-color
+          @media screen and (min-width: 992px)
+            background-color: $trans
+            border-bottom: 4px solid $s-color
+
+          color: $t-color
+
+      &.current-menu-item
+        > a
+          background-color: $s-color
+
+          @media screen and (min-width: 992px)
+            border-bottom: 4px solid $s-color
+
+            background-color: $trans
+
+      &.has-sub
+        > a
+          padding-right: 20px
+
+        .menu-caret
+          position: absolute
+          top: 7px
+          right: 10px
+          padding: 5px 10px
+          border: 1px solid $t-color
+          @media screen and (min-width: 992px)
+            top: 22px
+            right: 2px
+            padding: 0px
+            border: 0px solid $p-color
+
+          color: $t-color
+
+        &.open
+          > a
+            background-color: $s-color
+            color: $t-color
+
+            @media screen and (min-width: 992px)
+              background-color: $trans
+
+      .dropdown-menu
+        position: relative
+        width: 100%
+        border-radius: 0px
+
+        background-color: $t-color
+
+        font-family: $p-font
+        @media screen and (min-width: 992px)
+          position: absolute
+          width: auto
+
+        li
+
+          a
+
+            &:hover,
+            &:active,
+            &:focus
+              background-color: $s-color
+              color: $t-color
+
+@media (max-width: 991px)
   .navbar-header
     float: none
   .navbar-left, .navbar-right
@@ -38,7 +106,7 @@ ul.nav
   .navbar-toggle
     display: block
   .navbar-collapse
-    border-top: 1px solid transparent
+    border-top: 1px solid $trans
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1)
   .navbar-fixed-top
     top: 0
@@ -60,7 +128,7 @@ ul.nav
     float: none
     width: auto
     margin-top: 0
-    background-color: transparent
+    background-color: $trans
     border: 0
     -webkit-box-shadow: none
     box-shadow: none

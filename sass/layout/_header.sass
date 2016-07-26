@@ -1,10 +1,14 @@
 header
   position: relative
   max-height: 600px
+  @media screen and (min-width:1367px)
+    max-height: none
 
 
   .carousel
     max-height: 600px
+    @media screen and (min-width:1367px)
+      max-height: none
     overflow: hidden
 
     .carousel-inner
@@ -15,14 +19,87 @@ header
           width: 100%
 
         .carousel-caption
-          top: 10%
+          top: auto
           right: 10%
+          bottom: 20%
+          left: 10%
+          padding: 0px
+          @media screen and (min-width:992px)
+            bottom: 40%
+            width: 40%
+            left: auto
+
+            text-align: right
+
+          @media screen and (min-width:1200px)
+            bottom: 40%
+            width: 30%
+
+          h3
+            font-family: $p-font-bold
+            @media screen and (min-width:768px)
+              font-size: 3.000em
+            text-shadow: 0px 0px 15px rgba(0, 0, 0, 1)
+
+          p
+            @media screen and (min-width:768px)
+              font-size: 1.188em
+            text-shadow: 0px 0px 10px rgba(0, 0, 0, 1)
+
+
+        &:before
+          @media screen and (min-width:992px)
+            content: " "
+            position: absolute
+            top: 0
+            right: 0
+            left: 0
+            bottom: 0
+
+            background: url('../images/shadow-effect.png')
+            background-position: bottom center
+            background-size: cover
+
+            z-index: 0
 
     .carousel-indicators
-      top: 10%
+      top: auto
       bottom: auto
+      width: auto
+
+      @media screen and (min-width:992px)
+        bottom: 34%
+        right: 10%
+        left: auto
 
 
+      @media screen and (min-width:1200px)
+        bottom: 34%
+
+      //background-color: blue
+
+      li
+        height: 12px
+        width: 12px
+        margin: 0px
+        border: 1px solid $t-color
+
+        background-color: $t-color
+
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75)
+        -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75)
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75)
+
+        &.active
+          border: 1px solid $s-color
+
+          background-color: $s-color
+
+
+    .carousel-control
+      i
+        position: absolute
+        top: 45%
 
   .navbar-default
     @media screen and (min-width:992px)
@@ -31,21 +108,50 @@ header
       width: 100%
 
       z-index: 9
+
     margin-bottom: 0px
     padding: 0px
     border: 0px solid $p-color
+    border-radius: 0px
 
-    background-color: transparent
+    background-color: #000
+    @media screen and (min-width:992px)
+      background-color: $trans
 
     .navbar-header
       display: inline-block
       width: 100%
 
-      background-color: transparent
+      background-color: $trans
 
       text-align: center
 
       .navbar-brand
-        display: inline-block
-        margin: 0 auto
-        float: none
+        height: auto
+        margin: 0px
+        padding: 10px 15px
+        @media screen and (min-width:992px)
+          display: inline-block
+          margin: 0 auto
+          float: none
+
+      .navbar-toggle
+        border: 0px
+        padding: 0px
+        margin: 14px 20px
+
+        &:hover,
+        &:active,
+        &:focus
+          border-radius: 0px
+
+          background-color: $trans
+
+
+        i
+          font-size: 30px
+          color: $s-color
+
+        &.collapsed
+          i
+            color: $t-color

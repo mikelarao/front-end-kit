@@ -1,0 +1,47 @@
+.btn
+  &.btn-default
+    background: $trans
+    border: 2px solid $t-color
+    border-radius: 20px
+    padding: 10px 25px
+    @media screen and (min-width: 768px)
+      padding: 10px 50px
+
+    font-family: $p-font-bold
+    font-size: 0.875em
+    text-transform: uppercase
+    color: $t-color
+
+    &:hover
+      background-color: $t-color
+      color: $p-color
+
+      outline: none
+
+    &:active
+      background-color: darken($t-color, 20%)
+
+      outline: none
+
+  &.btn-info
+    border-radius: 20px
+    padding: 10px 25px
+    border: 2px solid $s-color
+
+    background-color: $s-color
+
+    &:hover
+      background-color: darken($s-color, 10%)
+      color: $t-color
+
+      outline: none
+
+    &:active
+      background-color: darken($s-color, 20%)
+
+      outline: none
+
+    font-family: $p-font-bold
+    font-size: 0.875em
+    text-transform: uppercase
+    color: $t-color
